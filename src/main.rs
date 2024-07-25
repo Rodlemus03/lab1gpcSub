@@ -33,6 +33,22 @@ fn main() {
     framebuffer.set_current_color(0xFFFFFF);
     framebuffer.polygon(&polygon_1);
 
+    let polygon_2 = vec![
+    (321, 335), 
+    (288, 286), 
+    (339, 251), 
+    (374, 302)
+];
+framebuffer.set_current_color(0x0000FF); // Azul
+framebuffer.fill_polygon(&polygon_2);
+framebuffer.set_current_color(0xFFFFFF); // Blanco
+framebuffer.polygon(&polygon_2);
+
+
+
+
+
+
 
     let _ = framebuffer.render_buffer("output.bmp");
 
