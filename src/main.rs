@@ -54,6 +54,32 @@ framebuffer.fill_polygon(&polygon_3);
 framebuffer.set_current_color(0xFFFFFF); // Blanco
 framebuffer.polygon(&polygon_3);
 
+let polygon_4 = vec![
+    (413, 177), (448, 159), (502, 88), (553, 53), (535, 36), 
+    (676, 37), (660, 52), (750, 145), (761, 179), (672, 192), 
+    (659, 214), (615, 214), (632, 230), (580, 230), (597, 215), 
+    (552, 214), (517, 144), (466, 180)
+];
+
+let polygon_5 = vec![
+    (682, 175), (708, 120), (735, 148), (739, 170)
+];
+
+// Rellenar el polígono 4 con verde
+framebuffer.set_current_color(0x00FF00); // Verde
+framebuffer.fill_polygon(&polygon_4);
+
+// Rellenar el agujero (polígono 5) con el color de fondo (por ejemplo, negro)
+framebuffer.set_current_color(0x000000); // Negro (color de fondo)
+framebuffer.fill_polygon(&polygon_5);
+
+// Dibujar el borde del polígono 4
+framebuffer.set_current_color(0xFFFFFF); // Blanco
+framebuffer.polygon(&polygon_4);
+
+// Dibujar el borde del polígono 5
+framebuffer.polygon(&polygon_5);
+
 
 
 
