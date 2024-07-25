@@ -39,7 +39,7 @@ fn main() {
     (339, 251), 
     (374, 302)
 ];
-framebuffer.set_current_color(0x0000FF); // Azul
+framebuffer.set_current_color(0xFF0000); // Azul
 framebuffer.fill_polygon(&polygon_2);
 framebuffer.set_current_color(0xFFFFFF); // Blanco
 framebuffer.polygon(&polygon_2);
